@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Web Sitem</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f2f2f2;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+        nav ul {
+           
+            list-style-type: none;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+        nav ul li a {
+            color:#fff ;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        main {
+            padding: 50px;
+        }
+        section {
+            margin-bottom: 30px;
+            display: none; /* Başlangıçta bölümleri gizle */
+        }
+        footer {
+            background-color:black;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>BLOG SAYFASI</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Anasayfa</a></li>
+                <li><a href="#kkkm">Hakkımda</a></li>
+                <li><a href="#bşr">Başarılar</a></li>
+                <li><a href="#ilt">İletişim</a></li>
+               
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <section id="home">
+            <!-- Ana sayfa içeriği buraya gelecek -->
+        </section>
+        
+        <section id="kkkm">
+            <h2>Hakkımda</h2>
+            <p>İsmail Savran, 12 Ocak 2003 tarihinde Aydın'da dünyaya gelmiştir. İlkokul eğitimini Güzelhisar'da tamamlamış, ardından ortaokul yıllarını Efeler'de geçirmiştir. Lise eğitimini başarıyla EMUAL'da tamamlamış ve üniversite hayatına Bilgisayar Mühendisliği alanında Afyon Kocatepe Üniversitesi'nde devam etmiştir.
+
+Spor tutkusuna erken yaşlarda voleybol ile başlamış olan İsmail, ilkokul yıllarında babasının da oynadığı Alanlıspor takımında voleybola adım atmıştır. Ortaokul ve lise dönemlerinde ise Aydın Büyükşehir Belediyesi (Aydın BŞB) takımında 5 yıl boyunca önemli bir rol oynamıştır. Bu süreçte takımının kaptanlığını da üstlenmiştir. Daha sonra, voleybol kariyerine Karşıyaka'nın altyapısında devam etmiş ancak bir sakatlık nedeniyle aktif sporculuk kariyerini sonlandırmak zorunda kalmıştır.
+
+Sporculuk kariyerinin ardından antrenörlük ve hakemlik alanına yönelen İsmail, 2022 yılında Aydın BŞB'nin midi kız kategorisinde antrenörlük yapmış ve genç yeteneklerin yetişmesine katkı sağlamıştır. Şu anda Türkiye Voleybol Federasyonu'nda hakem olarak görev yapmakta ve voleybol camiasına hizmet etmektedir.
+
+İsmail, lise ve ortaokul yıllarında sadece voleybol ile değil, aynı zamanda tenis, basketbol, masa tenisi, hentbol, uzun atlama ve gülle gibi çeşitli spor dallarında da başarıyla yer almıştır. Bu geniş spor deneyimi onun sporcu olarak edindiği disiplini ve liderlik yeteneklerini antrenörlük ve hakemlik kariyerinde de başarıyla sürdürmesine katkı sağlamıştır.</p>
+        </section>
+        
+        <section id="ilt">
+            <h2>İletişim</h2>
+            <p>E-posta: savranismail339@gmail.com </p>
+            <p>Telefon: 0505 040 40 24</p>
+        </section>
+        
+        <section id="bşr">
+            <h2>Takım Başarıları</h2>
+    <ul>
+        <li>1 kez Midi Erkekler Aydın Voleybol İl Şampiyonluğu</li>
+        <li>2 kez Genç Erkekler Aydın Voleybol İl Şampiyonluğu</li>
+        <li>4 kez Yıldız Erkekler Aydın Voleybol İl Şampiyonluğu</li>
+        <li>2 kez Hentbol Liseler Arası Turnuva Şampiyonluğu</li>
+        <li>1 kez Masa Tenisi Liseler Arası Turnuva Şampiyonluğu</li>
+        
+    </ul>
+    
+    <h2>Bireysel Başarılar</h2>
+    <ul>
+        <li>3 kez Yıldız Erkekler Sezon MVP Ödülü</li>
+        <li>7 kez Yılın Pasörü Ödülü</li>
+        <li>1 kez Aydın Liseler Arası Tenis Turnuvası Şampiyonluğu</li>        
+       
+    </ul>
+    
+    <h2>Antrenör Başarıları</h2>
+    <ul>
+        <li>2 kez Aydın Voleybol İl Şampiyonluğu</li>
+    </ul>
+</section>
+        
+    </main>
+    
+    <footer>
+        <p>&copy; Blog sayfası</p>
+    </footer>
+    
+    <script>
+        // JavaScript kodu buraya eklenecek
+        document.addEventListener("DOMContentLoaded", function() {
+            // Sayfa yüklendiğinde ana sayfayı görünür hale getir
+            document.getElementById("home").style.display = "block";
+            
+            // Menü bağlantılarına tıklandığında ilgili bölümü görünür hale getir
+            var links = document.querySelectorAll("nav ul li a");
+            links.forEach(function(link) {
+                link.addEventListener("click", function() {
+                    var targetId = this.getAttribute("href").substring(1); // "#" işaretini kaldır
+                    var targetSection = document.getElementById(targetId);
+                    
+                    // Tüm bölümleri gizle
+                    document.querySelectorAll("main section").forEach(function(section) {
+                        section.style.display = "none";
+                    });
+                    
+                    // Hedef bölümü görünür hale getir
+                    targetSection.style.display = "block";
+                });
+            });
+        });
+    </script>
+</body>
+</html>
+
