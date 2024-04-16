@@ -69,7 +69,7 @@
                 <div style="text-align:center;">
                     <img src="resimler/6.png" alt="Ana Sayfa Resmi">
                 </div>
-            <!-- Ana sayfa içeriği buraya gelecek -->
+            
         </section>
         
         <section id="kkkm">
@@ -121,24 +121,23 @@
     </footer>
     
     <script>
-        // JavaScript kodu buraya eklenecek
+       
         document.addEventListener("DOMContentLoaded", function() {
-            // Sayfa yüklendiğinde ana sayfayı görünür hale getir
+            
             document.getElementById("home").style.display = "block";
             
-            // Menü bağlantılarına tıklandığında ilgili bölümü görünür hale getir
+            
             var links = document.querySelectorAll("nav ul li a");
             links.forEach(function(link) {
                 link.addEventListener("click", function() {
                     var targetId = this.getAttribute("href").substring(1); // "#" işaretini kaldır
                     var targetSection = document.getElementById(targetId);
                     
-                    // Tüm bölümleri gizle
+                   
                     document.querySelectorAll("main section").forEach(function(section) {
                         section.style.display = "none";
                     });
                     
-                    // Hedef bölümü görünür hale getir
                     targetSection.style.display = "block";
                 });
             });
